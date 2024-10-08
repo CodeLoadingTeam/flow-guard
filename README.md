@@ -2,10 +2,15 @@
 
 <h3>Configuração</h3>
 
+## SQLite driver
+    ```
+    sudo apt install -y sqlite3
+    ```
+
 Abaixo estão listados os principais comandos para subir o ambiente da aplicação.
 <br>
 
-<h2>Instalação PHP</h2>
+## Instalação PHP
     ```
     sudo apt update
         && sudo apt install software-properties-common
@@ -18,14 +23,14 @@ Abaixo estão listados os principais comandos para subir o ambiente da aplicaç�
     ```
 
     ```
-    sudo apt install php-cli php-fpm php-pgsql php-xml php-mbstring php-zip php-bcmath php-tokenizer php-curl
+    sudo apt install php-cli php-fpm php-pgsql php-xml php-mbstring php-zip php-bcmath php-tokenizer php-curl php-sqlite3
     ```
 
     ```
     php -v
     ```
 
-<h2>Instalação Composer</h2>
+## Instalação Composer
     ```
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
     ```
@@ -46,12 +51,12 @@ Abaixo estão listados os principais comandos para subir o ambiente da aplicaç�
     sudo mv composer.phar /usr/local/bin/composer
     ```
 
-<h2>Instalação PostgreSQL</h2>
+## Instalação PostgreSQL
     ```
     docker compose up -d
     ```
 
-<h2>Instalação Laravel</h2>
+## Instalação Laravel
     ```
     cp .env.example .env
     ```
