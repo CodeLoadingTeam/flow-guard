@@ -2,31 +2,68 @@
 
 <h3>Configuração</h3>
 
-<p>Para configurar seu ambiênte utilizando docker, siga os passos abaixo:</p>
+Abaixo estão listados os principais comandos para subir o ambiente da aplicação.
+<br>
 
-NO DIRETORIO RAIZ DO SEU PROJETO LARAVEL
-1) Execute o comando: 
-    $ git clone git@github.com:brunojose13/docker.git
+<h2>Instalação PHP</h2>
+    ```
+    sudo apt update
+        && sudo apt install software-properties-common
+        && sudo add-apt-repository ppa:ondrej/php
+        && sudo apt update
+    ```
 
-2) Crie e/ou configure o seu arquivo .env.
-    Caso ainda não tenha criado, execute o comando: $ cp .env.example .env
+    ```
+    sudo apt install php
+    ```
 
-3) Execute os comandos: 
-    $ cp docker/Dockerfile Dockerfile 
-        && cp docker/docker-compose.yml docker-compose.yml 
-        && rm -rf docker
+    ```
+    sudo apt install php-cli php-fpm php-pgsql php-xml php-mbstring php-zip php-bcmath php-tokenizer php-curl
+    ```
 
-4) Para criar/iniciar um container docker:
-    $ docker-compose up -d
+    ```
+    php -v
+    ```
 
-5) Instale as dependencias do laravel em seu projeto utilizando docker:
-    $ docker exec php composer install
+<h2>Instalação Composer</h2>
+    ```
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    ```
 
-6) Para trabalhar com o servidor artisan, execute o seguinte comando:
-    $ docker exec php php artisan serve --host=0.0.0.0 --port=8000
+    ```
+    php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+    ```
 
-7) Caso precisar iniciar novamente o servidor artisan, execute os seguintes comandos:
-    $ docker-compose stop 
-        && docker-compose up -d 
-        && docker restart php
-        && docker exec php php artisan serve --host=0.0.0.0 --port=8000
+    ```
+    php composer-setup.php
+    ```
+
+    ```
+    php -r "unlink('composer-setup.php');"
+    ```
+
+    ```
+    sudo mv composer.phar /usr/local/bin/composer
+    ```
+
+<h2>Instalação PostgreSQL</h2>
+    ```
+    docker compose up -d
+    ```
+
+<h2>Instalação Laravel</h2>
+    ```
+    cp .env.example .env
+    ```
+
+    ```
+    composer install
+    ```
+
+    ```
+    php artisan key:generate
+    ```
+
+    ```
+    php artisan migrate
+    ```
