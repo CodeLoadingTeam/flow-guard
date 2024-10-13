@@ -1,19 +1,21 @@
 <?php
 
+use App\Http\Controllers\AutomobileController;
 use App\Http\Controllers\ResidentController;
 use Illuminate\Support\Facades\Route;
 
+/// Frontend /////////////////////////////////////////////////
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/salvar', function () {
-    // dd('treste');
-    return view('welcome');
+Route::get('/acesso', function () {
+    return view('access');
 });
 
-Route::prefix('residente')->group(function () {
-    Route::post('/salvar', [ResidentController::class, 'save']);
-});
+/// Backend /////////////////////////////////////////////////
+Route::post('/veiculo/entrar', [AutomobileController::class, 'enter'])->name('automobile.enter');
 
-// http://localhost:8000/residente/salvar
+// Route::prefix('residente')->group(function () {
+//     Route::post('/salvar', [ResidentController::class, 'save']);
+// });
