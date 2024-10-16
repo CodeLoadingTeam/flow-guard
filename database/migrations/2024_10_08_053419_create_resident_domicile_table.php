@@ -15,9 +15,12 @@ return new class extends Migration
             $table->foreignId('resident_id')
                 ->constrained()
                 ->cascadeOnDelete();
+            
             $table->foreignId('domicile_id')
                 ->constrained('domiciles')
                 ->cascadeOnDelete();
+            
+            $table->primary(['resident_id', 'domicile_id']);
         });
     }
 

@@ -22,7 +22,7 @@ class AutomobileFactory extends Factory
         return [
             'brand' => $brand = $this->getRandomBrand(),
             'model' => $this->getRandomModel($brand),
-            'color' => $faker->colorName(),
+            'color' => $faker->safeColorName(),
             'year' => $faker->year(),
             'plate_mercosul' => $isMercosul = fake()->boolean(),
             'plate' => $isMercosul
