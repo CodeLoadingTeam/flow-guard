@@ -16,7 +16,7 @@ return new class extends Migration
                 ->constrained()
                 ->cascadeOnDelete();
             $table->foreignId('domicile_id')
-                ->constrained()
+                ->constrained('domiciles')
                 ->cascadeOnDelete();
         });
     }

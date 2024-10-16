@@ -10,6 +10,8 @@ class Domicile extends Model
 {
     use HasFactory;
 
+    protected $table = 'domiciles';
+
     protected $fillable = [
         'domicile_number',
         'tower',

@@ -6,18 +6,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Condominium extends Model
+class ResidentDomicile extends Model
 {
     use HasFactory;
 
-    protected $table = 'condominiums';
+    protected $table = 'resident_domicile';
 
-    protected $fillable = [
-        'name',
-        'street',
-        'neighborhood',
-        'number',
-    ];
+    public $timestamps = false;
+
+    public function resident(): HasMany
+    {
+        return $this->hasMany(Resident::class);
+    }
 
     public function domicile(): HasMany
     {

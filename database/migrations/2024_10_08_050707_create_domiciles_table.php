@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('domicile_number');
             $table->string('tower')->nullable();
-            $table->foreignId('condominium_id')->constrained();
+            $table->foreignId('condominium_id')->constrained('condominiums');
             $table->timestamps();
             $table->softDeletes();
         });
