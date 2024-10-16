@@ -3,24 +3,29 @@
 <body>
     <div class="container">
         <div class="box">
-            <p>Por favor, selecione tipo da sua placa:</p>
             <form action="{{ route('automobile.enter') }}" method="POST">
-                <input type="radio" id="mercosul" name="plate" value="placa_mercosul">
-                <label for="mercosul">Mercosul</label><br>
+                @csrf
+                <p>Selecione o tipo da placa</p>
 
-                <input type="radio" id="old" name="plate" value="placa_antiga">
-                <label for="old">Placa Antiga</label><br><br>
+                <input type="radio" id="mercosul" name="plate_type" value="placa_mercosul" style="margin-right: 2px;">
+                <label for="mercosul" style="margin-right: 25px;">Mercosul</label>
+
+                <input type="radio" id="old" name="plate_type" value="placa_antiga" style="margin-right: 2px;">
+                <label for="old" style="margin-right: 25px;">Antigo</label><br><br>
 
                 <input type="text" name="plate"><br><br>
+
                 <input type="submit" value="Entrar">
-            </form>        
+            </form>
         </div>
     </div>
 </body>
 </html>
 
-{{-- CSS --}}
 <style>
+body {
+    margin: 0px;
+}
 .container {
     width: 100vw;
     height: 100vh;
@@ -32,15 +37,13 @@
 }
 
 .box {
-    width: 300px;
+    width: 500px;
+    height: 600px;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-body {
-    margin: 0px;
-}
-
 </style>
