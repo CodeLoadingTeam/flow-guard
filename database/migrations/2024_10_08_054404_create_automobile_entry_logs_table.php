@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('automobile_id')->constrained();
             $table->enum('action', ['in', 'out']);
-            $table->timestamp('created_at')->nullable();
+            $table->timestamp('created_at');
         });
     }
 

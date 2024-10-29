@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Automobile;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,9 @@ class AutomobileEntryLogFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'automobile_id' => Automobile::factory(),
+            'action' => fake()->randomElement(['in', 'out']),
+            'created_at' => fake()->dateTimeThisMonth(),
         ];
     }
 }
