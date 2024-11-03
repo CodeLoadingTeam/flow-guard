@@ -10,6 +10,8 @@ Route::view('/', 'welcome');
 
 Route::view('/acesso', 'access.access');
 
+Route::view('/entrada', 'entry-flow.access');
+
 // BACK-END - Controllers
 Route::post('/veiculo/entrar', [AutomobileController::class, 'enter'])
     ->name('automobile.enter');

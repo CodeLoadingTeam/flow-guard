@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@450&display=swap');
+
+/* CORPO DA PÁGINA */
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(45deg, #124d6e, #1b75a8);
+}
+
+/* CONTAINER BRANCO */
+.container {
+    border-radius: 9px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 255px;
+    height: 450px;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+/* LOGO */
+img {
+    max-width: 210px;
+    border-radius: 7px;
+}
+
+/* PARA OS TÓPICOS */
+.text-topic {
+    text-align: left;
+    font-size: 19px;
+    padding-top: 20px;
+}
+
+/* RADIOBUTTONS PARA TIPOS DA PLACA */
+.radio-group {
+    display: flex;
+    font-size: 19px;
+    justify-content: center;
+}
+
+.radio-group label {
+    /* margin: 0 10px; */
+    margin-right: 10%; 
+}
+
+.radio-group input {
+    margin-right: 10px; /* espaçamento entre radio button e label */
+}
+
+/* INPUT DA PLACA */
+.input-plate {
+    display: flex;
+    align-items: center;
+}
+
+.input-plate input {
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    flex: 1;
+    font-size: medium;
+    text-align: center;
+    text-indent: 2px;
+    padding: 10px;
+}
+
+.input-plate input::placeholder {
+    color: #bdbdbd;
+    text-align: center;
+}
+
+/* BOTÃO ENTRAR */
+#enter {
+    width: 115px;
+    height: 40px;
+    color: #fff;
+    background-color: #186998;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+    margin-top: 40px;
+}
+
+#enter:hover {
+    background-color: #1f88c5;
+}
