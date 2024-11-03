@@ -22,21 +22,21 @@ body {
     text-align: center;
 }
 
-.header {
+/* .header {
     background-color: #2d2d2d;
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 20px;
-}
+} */
 
-.section-title {
+/* .section-title {
     background-color: #333;
     color: #fff;
     border: none;
     padding: 5px 15px;
     border-radius: 8px;
     cursor: pointer;
-}
+} */
 
 .content {
     background-color: #b0b0b0;

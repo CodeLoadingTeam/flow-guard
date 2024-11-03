@@ -5,16 +5,12 @@ use App\Http\Controllers\ResidentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/// Frontend - Views /////////////////////////////////////////////////
-Route::get('/', function () {
-    return view('welcome');
-});
+// FRONT-END - Views
+Route::view('/', 'welcome');
 
-Route::get('/acesso', function () {
-    return view('access.access');
-});
+Route::view('/acesso', 'access.access');
 
-/// Backend - Controllers /////////////////////////////////////////////////
+// BACK-END - Controllers
 Route::post('/veiculo/entrar', [AutomobileController::class, 'enter'])
     ->name('automobile.enter');
 

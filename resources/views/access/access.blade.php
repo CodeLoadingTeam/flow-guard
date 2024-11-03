@@ -16,20 +16,21 @@
             <div class="logo">LOGO</div>
             <div class="box">
                 <h3 id="tipo_placa">Selecione o tipo da placa:</h3>
-                <!-- <form action="{{ route('automobile.enter') }}" method="POST"> -->
-                <div>
-                    <input type="radio"id="mercosul" name="plate" value="placa_mercosul">
-                    <label for="mercosul">Mercosul</label><br>
-                </div>
-                <div class="rd_placa_antiga">
-                    <input type="radio" id="old" name="plate" value="placa_antiga">
-                    <label for="old">Placa antiga.</label>
-                </div>
+                <form action="{{ route('automobile.enter') }}" method="POST">
+                    @csrf
+                    <div>
+                        <input type="radio"id="mercosul" name="plate" value="placa_mercosul">
+                        <label for="mercosul">Mercosul</label><br>
+                    </div>
+                    <div class="rd_placa_antiga">
+                        <input type="radio" id="old" name="plate" value="placa_antiga">
+                        <label for="old">Placa antiga.</label>
+                    </div>
 
-                <h3>Insira a Placa:</h3>
+                    <h3>Insira a Placa:</h3>
 
-                <input type="text" name="plate"><br><br>
-                <button id="entrarButton">Entrar</button>
+                    <input type="text" name="plate"><br><br>
+                    <button id="entrarButton" type="submit">Entrar</button>
                 </form>
             </div>
         </div>
@@ -62,8 +63,6 @@
         </div>
         </div>
     </section>
-
-    <!-- <script src="resoucers/js/access/script.js"></script> -->
 
     <script src="js/access/script.js"></script>
 </body>
