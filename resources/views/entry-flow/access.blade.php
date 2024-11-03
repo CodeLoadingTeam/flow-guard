@@ -12,19 +12,22 @@
 <body>
     <div class="container">
         <img src="img/logo.png" alt="Flow Guard Logo">
-        <form>
+        <form id="plate_form">
+            @csrf
             <p class="text-topic">Selecione o tipo da placa</p>
             <div class="radio-group">
-                <label><input type="radio" name="plate_type" value="antigo" checked>Mercosul</label>
-                <label><input type="radio" name="plate_type" value="mercosul">Antigo</label>
+                <label><input type="radio" id="mercosul_plate" name="plate_type" checked>Mercosul</label>
+                <label><input type="radio" id="old_plate" name="plate_type">Antigo</label>
             </div>
             <p class="text-topic">Digite a placa</p>
             <div class="input-plate">
-                <input type="text" name="plate" placeholder="XPE3T01">
+                <input type="text" id="plate" name="plate" placeholder="XPE3T01">
             </div>
             <button id="enter" type="submit">Entrar</button>
         </form>
     </div>
+
+    <script src="entry-flow/js/plate-placeholder.js"></script>
 </body>
 
 </html>
