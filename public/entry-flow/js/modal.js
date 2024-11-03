@@ -19,8 +19,6 @@ function submitForm() {
         return response.json();
     })
     .then(data => {
-        console.log('sucesso')
-
         // Preenche o modal com os dados retornados
         document.getElementById('resident').innerText    = `Morador: ${data.resident}`;
         document.getElementById('condominium').innerText = `Condomínio: ${data.condominium}`;
@@ -44,8 +42,6 @@ function closeModal() {
 }
 
 function openErrorModal(message) {
-    console.log('entrou no catch');
-
     document.getElementById("error_modal").style.display = "flex";
     document.getElementById("error_message").innerText = message;
 }
