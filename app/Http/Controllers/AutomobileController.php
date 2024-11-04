@@ -28,6 +28,7 @@ class AutomobileController extends Controller
             ? 'Mercosul'
             : 'Antiga';
 
+        /** @todo adicionar dados restantes */
         $data = [
             'resident'    => "{$automobile->resident->first_name} {$automobile->resident->last_name}",
             'condominium' => '',
