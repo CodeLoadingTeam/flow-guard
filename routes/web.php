@@ -11,7 +11,7 @@ Route::get('/', function () {
 });
 
 Route::get('/acesso', function () {
-    return view('access');
+    return view('access.access');
 });
 
 /// Backend - Controllers /////////////////////////////////////////////////
