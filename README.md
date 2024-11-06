@@ -1,13 +1,17 @@
 # flow-guard
 
+_**Observação:** para testar a aplicação, você deve ter o Ubuntu instalado em sua maquina._
+
+<br>
+
 <h3>Configuração</h3>
 
 ## SQLite driver
 ```
 sudo apt install -y sqlite3
 ```
-
-Abaixo estão listados os principais comandos para subir o ambiente da aplicação.
+<br>
+Abaixo estão listados os principais comandos para configurar o ambiente da aplicação.
 <br>
 
 ## Instalação PHP
@@ -83,7 +87,7 @@ php artisan tinker
 ```
 
 Ctrl + C
-
+<br><br>
 Por fim, rode o comando abaixo e utilize o link para abrir o sistema em seu navegador. Utilize uma das placas apresentadas em seu terminal para testar o sistema
 ```
 php artisan serve
